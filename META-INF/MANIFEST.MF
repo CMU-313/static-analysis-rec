@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Static-analysis-rec
+Bundle-SymbolicName: RandSinDetector;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: static-analysis-rec
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: com.github.spotbugs.plugin.eclipse;bundle-version="3.1.8"
