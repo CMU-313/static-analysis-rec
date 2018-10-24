@@ -2,7 +2,9 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
+         id="edu.cmu.cs.cs313.RandSinDetector"
          point="edu.umd.cs.findbugs.plugin.eclipse.findbugsPlugins">
+        <findbugsPlugin fbPluginId="edu.cmu.cs.cs313.RandSinDetector" libraryPath="./bin" />
    </extension>
 
 </plugin>

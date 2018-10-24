@@ -1,0 +1,5 @@
+<FindbugsPlugin>
+	<Detector class="edu.cmu.cs.cs313.RandSinDetector" speed="fast" />
+
+	<BugPattern abbrev="CS" type="CS_RAND_BEFORE_SIN" category="CORRECTNESS" />
+</FindbugsPlugin>

@@ -1,0 +1,24 @@
+<MessageCollection>
+	<Detector class="edu.cmu.cs.cs313.RandSinDetector">
+		<Details>
+<![CDATA[
+<p> This detector finds Math.random calls before Math.sin calls 
+It is a nonsensical detector.
+]]>
+		</Details>
+	</Detector>
+
+	<BugPattern type="CS_RAND_BEFORE_SIN">
+		<ShortDescription>Found Math.random call before Math.sin
+		</ShortDescription>
+		<LongDescription>Found Math.random call before Math.sin in {1}
+		</LongDescription>
+		<Details>
+<![CDATA[
+<p> ...
+]]>
+		</Details>
+	</BugPattern>
+
+	<BugCode abbrev="CS">misc</BugCode>
+</MessageCollection>
