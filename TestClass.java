@@ -1,6 +1,16 @@
 package test;
 public class TestClass {
-	public void foo() {
+	public void mar() {
+		Math.sin(2.0);
+		Math.random();
+	}
+	
+	public void moo() { // Error
+		Math.random();
+		Math.sin(2.0);
+	}
+	
+	public void foo() { // Error
 		int i = 1;
 		i += Math.random();
 		try {
@@ -30,6 +40,15 @@ public class TestClass {
 			i += Math.random();
 			System.out.println(i);
 			return;
+		}
+		Math.sin(.3);
+	}
+	
+	public void foobar1() { // Error
+		int i = bar();
+		if (i > 1) {
+			i += Math.random();
+			System.out.println(i);
 		}
 		Math.sin(.3);
 	}
