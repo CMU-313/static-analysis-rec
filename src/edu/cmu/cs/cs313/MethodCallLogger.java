@@ -51,7 +51,7 @@ import edu.umd.cs.findbugs.classfile.MethodDescriptor;
  * source statement to a sink statement.
  * 
  * In this particular case, we issue an error if there is ever a call to
- * Math.random() not followed by a call to Math.sin(), even though it makes not
+ * Math.random() followed by a call to Math.sin(), even though it makes not
  * sense ;)
  */
 public class MethodCallLogger extends CFGDetector {
