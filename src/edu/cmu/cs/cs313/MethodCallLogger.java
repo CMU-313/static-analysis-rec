@@ -87,7 +87,7 @@ public class MethodCallLogger extends CFGDetector {
 	 */
 	private void logMethodCallInstruction(InstructionHandle instrHandle) {
 		// we care about normal method calls on classes and interfaces (invoke
-		// dynamic and interface), but not about static method calls (invoke
+		// virtual and interface), but not about static method calls (invoke
 		// static) and constructor calls (invoke special)
 		if (instrHandle.getInstruction() instanceof INVOKEVIRTUAL
 				|| instrHandle.getInstruction() instanceof INVOKEINTERFACE) {
