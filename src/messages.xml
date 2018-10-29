@@ -16,6 +16,15 @@ and fields in method calls
 		</Details>
 	</Detector>
 
+	<Detector class="edu.cmu.cs.cs313.ControlFlowPrinter">
+		<Details>
+<![CDATA[
+<p> This detector prints a control flow graph.
+It is a nonsensical detector.
+]]>
+		</Details>
+	</Detector>
+
 	<BugPattern type="CS_RAND_BEFORE_SIN">
 		<ShortDescription>Found Math.random call before Math.sin
 		</ShortDescription>
