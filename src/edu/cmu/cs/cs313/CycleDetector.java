@@ -87,11 +87,11 @@ public class CycleDetector extends CFGDetector {
 			
             while (childrenIterator.hasNext()) {
                 Edge edge = childrenIterator.next();
-                // TODO: The control flow graph has unhandled exceptional edges, which might
-                // produce false positives of a cycle. You need to filter a specific kind of
-                // edge that should not be added to the blocks to analyze.
-                BasicBlock child = edge.getTarget();
-                blocks.add(child);
+                
+                if (edge.getType() != EdgeTypes.UNHANDLED_EXCEPTION_EDGE) {
+                    BasicBlock child = edge.getTarget();
+                    blocks.add(child);
+                }
             }
 
 		}
