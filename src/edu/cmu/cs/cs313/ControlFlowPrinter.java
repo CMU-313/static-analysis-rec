@@ -32,17 +32,19 @@ public class ControlFlowPrinter extends CFGDetector{
 	}
 
 	private void printCFG(CFG cfg){
-		int count = 0;
 		HashMap<BasicBlock,Integer> blockRename = new HashMap<BasicBlock,Integer>();
 		Iterator<BasicBlock> bbIter = cfg.blockIterator();
-		//iterate throught the blocks in the control flow graph
+		//iterate through the blocks in the control flow graph
+		// note that this simply iterates over the list of blocks provided by the cfg;
+		// it does not follow paths in any interesting way.
 		while(bbIter.hasNext()){
-			//print the indentification information for each block
+			//print the identification information for each block
 			BasicBlock currentBlock = bbIter.next();
 			if(currentBlock.getLabel()==cfg.getEntry().getLabel()){
 				System.out.println("Starting Block!");
 			}
 			System.out.println("Current Block Label: "+currentBlock.getLabel());
+			blockRename.put(currentBlock, currentBlock.getLabel());
 			//print out the java byte code instructions in each block
 			System.out.println("instructions for block "+blockRename.get(currentBlock)+":");
 			InstructionIterator ii = currentBlock.instructionIterator();
@@ -52,7 +54,7 @@ public class ControlFlowPrinter extends CFGDetector{
 			}
 			//print out the list of blocks which come before this block in the control flow graph
 			Iterator<BasicBlock> predIterator = cfg.predecessorIterator(currentBlock);
-			System.out.print("predecessors: ");
+			System.out.print("predecessor blocks: ");
 			while(predIterator.hasNext()){
 				int blockName = predIterator.next().getLabel();
 				System.out.print(blockName+", ");
@@ -60,7 +62,7 @@ public class ControlFlowPrinter extends CFGDetector{
 			System.out.println(""); //finished the current line
 			//print out the list of blocks which come after this block in the control flow graph
 			Iterator<BasicBlock> successorIterator = cfg.successorIterator(currentBlock);
-			System.out.print("successors: ");
+			System.out.print("successor blocks: ");
 			while(successorIterator.hasNext()){
 				int blockName = successorIterator.next().getLabel();
 				System.out.print(blockName+", ");

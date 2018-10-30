@@ -24,6 +24,14 @@ It is a nonsensical detector.
 ]]>
 		</Details>
 	</Detector>
+	<Detector class="edu.cmu.cs.cs313.CycleDetector">
+		<Details>
+<![CDATA[
+<p> This detector finds a cycle in a control flow graph
+It is a nonsensical detector.
+]]>
+		</Details>
+	</Detector>
 
 	<BugPattern type="CS_RAND_BEFORE_SIN">
 		<ShortDescription>Found Math.random call before Math.sin

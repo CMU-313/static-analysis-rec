@@ -2,6 +2,7 @@
 	<Detector class="edu.cmu.cs.cs313.RandSinDetector" speed="fast" />
 	<Detector class="edu.cmu.cs.cs313.MethodCallLogger" speed="fast" />
 	<Detector class="edu.cmu.cs.cs313.ControlFlowPrinter" speed="fast" />
+	<Detector class="edu.cmu.cs.cs313.CycleDetector" speed="fast" />
 
 	<BugPattern abbrev="CS" type="CS_RAND_BEFORE_SIN" category="CORRECTNESS" />
 </FindbugsPlugin>
